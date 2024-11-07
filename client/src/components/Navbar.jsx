@@ -2,18 +2,16 @@ import { useRef } from "react";
 import {
   FaBars,
   FaTimes,
-  //   FaBroadcastTower,
-  //   FaBullhorn,
+  FaBroadcastTower,
+  FaBullhorn,
   FaDeezer,
   FaEnvelope,
   FaExclamation,
-  //   FaHeadset,
-  //   FaHome,
+  FaHeadset,
   FaInstagram,
   FaMicrophone,
-  //   FaSearch,
   FaSpotify,
-  //   FaUser,
+  FaHome,
 } from "react-icons/fa";
 import "../styles/navbar.css";
 import { Marquee } from "./Marquee";
@@ -57,10 +55,22 @@ function Navbar() {
       <div className="navbar-links">
         <img src="/images/Logo-radio.png" alt="Logo" />
         <nav ref={navRef}>
-          <a href="/#">Inicio</a>
-          <a href="/#">Nosotros</a>
-          <a href="/#">Noticias</a>
-          <a href="/#">Programas</a>
+          <div>
+            <i>{<FaHome />}</i>
+            <a href="/#">Inicio</a>
+          </div>
+          <div>
+            <i>{<FaBroadcastTower />}</i>
+            <a href="/#">Nosotros</a>
+          </div>
+          <div>
+            <i>{<FaBullhorn />}</i>
+            <a href="/#">Noticias</a>
+          </div>
+          <div>
+            <i>{<FaHeadset />}</i>
+            <a href="/#">Programas</a>
+          </div>
           <button className="nav-btn nav-close-btn" onClick={showNavbar}>
             <FaTimes />
           </button>
