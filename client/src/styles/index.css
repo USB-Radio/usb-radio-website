@@ -1,0 +1,19 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --color-main: #fd5f00;
+  --color-secondary: #0d1128;
+  --color-secondary-darker: #090b1b;
+  --color-body: #ffffff;
+  --color-black: #000000;
+  --color-white: #ffffff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #181818;
+  min-height: 160vh;
+}
