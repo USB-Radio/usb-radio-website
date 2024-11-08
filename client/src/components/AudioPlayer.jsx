@@ -98,7 +98,9 @@ function AudioPlayer() {
                 max={duration}
                 value={elapsed}
                 className="seek-bar music"
-                // onChange={handleSliderChange}
+                onChange={(e) =>
+                  console.log("Cambio en el deslizador:", e.target.value)
+                }
               />
               <div className="muplayer-timers">
                 <span className="current-time">{startTime}</span>
