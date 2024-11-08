@@ -4,7 +4,7 @@ services:
   backend:
     build:
       context: .  # Directorio raíz para el backend
-      dockerfile: Dockerfile.backend  # Dockerfile específico para el backend
+      dockerfile: Dockerfile  # Dockerfile específico para el backend
     ports:
       - "3000:3000"  # Mapea el puerto del backend
     volumes:
