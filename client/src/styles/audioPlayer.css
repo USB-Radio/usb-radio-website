@@ -1,4 +1,5 @@
 .muplayer {
+  position: relative;
   width: 100%;
   padding: 3rem;
   margin-top: 6rem;
@@ -74,6 +75,9 @@
   box-shadow: 0 0 0 8px var(--color-secondary);
   animation: rotate 20s linear infinite;
   animation-play-state: paused;
+}
+.songcover.play {
+  animation-play-state: running;
 }
 .songcover:hover {
   transform: scale(1.025);

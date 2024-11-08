@@ -1,14 +1,14 @@
 import { FaHeadphones, FaVolumeUp } from "react-icons/fa";
 import { useData } from "../context/radioContext";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { formatTime } from "../utils/formatTime";
 import "../styles/audioPlayer.css";
 
 function AudioPlayer() {
   const [isPaused, setIsPaused] = useState(true);
   const { radioData } = useData();
+  const audioRef = useRef(null);
 
-  console.log(radioData);
   const {
     listenUrl = "https://a6.asurahosting.com:7340/radio.mp3",
     totalListeners = 0,
@@ -23,23 +23,28 @@ function AudioPlayer() {
       } = {},
       playlist = "Servicio no disponible",
     } = {},
-    nextPlaying: {
-      text: nextSongText = "No hay proxima canción",
-      art: nextSongArt = "/images/favicon.png",
-    } = {},
+    // nextPlaying: {
+    //   text: nextSongText = "No hay proxima canción",
+    //   art: nextSongArt = "/images/favicon.png",
+    // } = {},
   } = radioData || {};
 
   const endTime = formatTime(duration);
   const startTime = formatTime(elapsed);
 
   const handleButtonClick = () => {
+    if (isPaused) {
+      audioRef.current.src = listenUrl;
+      audioRef.current.play();
+    } else {
+      audioRef.current.pause();
+    }
     setIsPaused(!isPaused);
-    console.log(isPaused);
   };
 
   return (
     <section className="muplayer">
-      {/* <audio src={listenUrl}></audio> */}
+      <audio ref={audioRef} src={listenUrl}></audio>
       <div className="muplayer-container">
         <div className="muplayer-title">
           <div className="muplayer-playlist">
@@ -58,7 +63,7 @@ function AudioPlayer() {
         <div className="muplayer-content">
           <div className="songcover-field">
             <div
-              className={`songcover play`}
+              className={`songcover ${!isPaused ? "play" : ""}`}
               style={{ backgroundImage: `url(${art})` }}
 
               // onClick={handleButtonClick}
