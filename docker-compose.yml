@@ -1,0 +1,28 @@
+version: '3'  # Define la versión de Docker Compose
+
+services:
+  backend:
+    build:
+      context: .  # Directorio raíz para el backend
+      dockerfile: Dockerfile  # Dockerfile específico para el backend
+    ports:
+      - "3000:3000"  # Mapea el puerto del backend
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    command: npm run dev  # Asegúrate de tener este script en tu package.json del backend
+
+  frontend:
+    build:
+      context: ./client  # Directorio específico para el frontend
+      dockerfile: Dockerfile.frontend  # Dockerfile específico para el frontend
+    ports:
+      - "5173:5173"  # Mapea el puerto del frontend
+    volumes:
+      - ./client:/client
+      - /client/node_modules
+    environment:
+      - NODE_ENV=development
+    command: npm run dev  # Asegúrate de tener este script en tu package.json del frontend

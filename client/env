@@ -1,0 +1,14 @@
+# SERVER PORT
+PORT = 3000
+
+# ACR CLOUD 
+ACR_HOST = identify-us-west-2.acrcloud.com
+ACR_ENDPOINT=  /v1/identify
+ACR_SIGNATURE_VERSION = 1
+ACR_DATA_TYPE = audio
+ACR_ACCESS_KEY = a08bafa8b27560228ba16cda96a3c44f
+ACR_ACCESS_SECRET = vcJ011PdMUlndOIr0Ba4th03HJCujIVInika9D9C
+
+# AZURACAST
+STREAM_URL = https://a6.asurahosting.com:7340/radio.mp3
+AZURA_API_URL = https://a6.asurahosting.com/api/nowplaying/usb_radio
