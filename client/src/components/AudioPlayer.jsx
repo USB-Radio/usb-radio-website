@@ -6,6 +6,7 @@ import "../styles/audioPlayer.css";
 
 function AudioPlayer() {
   const [isPaused, setIsPaused] = useState(true);
+  const [volume, setVolume] = useState(1);
   const { radioData } = useData();
   const audioRef = useRef(null);
 
@@ -23,10 +24,6 @@ function AudioPlayer() {
       } = {},
       playlist = "Servicio no disponible",
     } = {},
-    // nextPlaying: {
-    //   text: nextSongText = "No hay proxima canción",
-    //   art: nextSongArt = "/images/favicon.png",
-    // } = {},
   } = radioData || {};
 
   const endTime = formatTime(duration);
@@ -40,6 +37,12 @@ function AudioPlayer() {
       audioRef.current.pause();
     }
     setIsPaused(!isPaused);
+  };
+
+  const handleVolumeChange = (e) => {
+    const newVolume = parseFloat(e.target.value);
+    setVolume(newVolume);
+    audioRef.current.volume = newVolume;
   };
 
   return (
@@ -59,14 +62,11 @@ function AudioPlayer() {
             <span className="muplayer-listeners-number">{totalListeners}</span>
           </div>
         </div>
-        {/* contenido perteneciente al cuerpo del reproductor mp3 */}
         <div className="muplayer-content">
           <div className="songcover-field">
             <div
               className={`songcover ${!isPaused ? "play" : ""}`}
               style={{ backgroundImage: `url(${art})` }}
-
-              // onClick={handleButtonClick}
             ></div>
           </div>
           <div className="muplayer-items">
@@ -92,6 +92,8 @@ function AudioPlayer() {
                   min="0"
                   max="1"
                   step="0.01"
+                  value={volume}
+                  onChange={handleVolumeChange}
                   className="seek-bar volume"
                 />
               </div>
