@@ -28,3 +28,17 @@
 .icon-block:hover {
   background-color: var(--color-main);
 }
+.socialnetwork-list {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.socialnetwork-list.hidden {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+}
+
+.socialnetwork-list.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
