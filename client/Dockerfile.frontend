@@ -1,0 +1,23 @@
+# Dockerfile para el frontend (Vite)
+FROM node:18-alpine
+
+# Establece el directorio de trabajo
+WORKDIR /client
+
+# Copia los archivos de package.json y package-lock.json del frontend
+COPY package*.json ./
+
+# Instala las dependencias del frontend
+RUN npm install
+
+# Copia el resto de los archivos del frontend
+COPY . .
+
+# Construye la aplicación para producción
+RUN npm run build
+
+# Expone el puerto en el que Vite servirá la aplicación
+EXPOSE 5173
+
+# Comando para ejecutar el servidor de Vite
+CMD ["npm", "run", "preview"]
