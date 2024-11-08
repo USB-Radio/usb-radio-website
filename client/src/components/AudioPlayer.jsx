@@ -5,7 +5,10 @@ import { formatTime } from "../utils/formatTime";
 import "../styles/audioPlayer.css";
 
 function AudioPlayer() {
+  const [isPaused, setIsPaused] = useState(true);
   const { radioData } = useData();
+
+  console.log(radioData);
   const {
     listenUrl = "https://a6.asurahosting.com:7340/radio.mp3",
     totalListeners = 0,
@@ -15,7 +18,7 @@ function AudioPlayer() {
       song: {
         title = "No estamos al aire 😞",
         artist = "pronto volveremos.... ",
-        album = "No hay datos",
+        album = "No hay información",
         art = "/images/favicon.png",
       } = {},
       playlist = "Servicio no disponible",
@@ -26,13 +29,17 @@ function AudioPlayer() {
     } = {},
   } = radioData || {};
 
-  const coverImage = art ? art : "/images/favicon.png";
   const endTime = formatTime(duration);
   const startTime = formatTime(elapsed);
-  const [isPaused, setIsPaused] = useState(true);
+
+  const handleButtonClick = () => {
+    setIsPaused(!isPaused);
+    console.log(isPaused);
+  };
+
   return (
     <section className="muplayer">
-      {/* <audio></audio> */}
+      {/* <audio src={listenUrl}></audio> */}
       <div className="muplayer-container">
         <div className="muplayer-title">
           <div className="muplayer-playlist">
@@ -52,7 +59,7 @@ function AudioPlayer() {
           <div className="songcover-field">
             <div
               className={`songcover play`}
-              style={{ backgroundImage: `url(${coverImage})` }}
+              style={{ backgroundImage: `url(${art})` }}
 
               // onClick={handleButtonClick}
             ></div>
@@ -64,7 +71,10 @@ function AudioPlayer() {
               <p className="muplayer-genre">
                 Album: <span className="muplayer-genretype">{album}</span>
               </p>
-              <button className={`muplayer-play-btn`}>
+              <button
+                className={`muplayer-play-btn ${!isPaused ? "pause" : ""}`}
+                onClick={handleButtonClick}
+              >
                 <span></span>
                 <span></span>
               </button>
@@ -82,7 +92,14 @@ function AudioPlayer() {
               </div>
             </div>
             <div className="song-slider">
-              <input type="range" min="0" className="seek-bar music" />
+              <input
+                type="range"
+                min="0"
+                max={duration}
+                value={elapsed}
+                className="seek-bar music"
+                // onChange={handleSliderChange}
+              />
               <div className="muplayer-timers">
                 <span className="current-time">{startTime}</span>
                 <span className="live-status">En vivo </span>

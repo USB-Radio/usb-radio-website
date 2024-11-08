@@ -215,6 +215,15 @@
   }
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   .muplayer-playitems {
     padding: 1rem;
@@ -289,14 +298,5 @@
   }
   .volume-slider {
     display: none;
-  }
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }

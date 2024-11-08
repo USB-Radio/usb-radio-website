@@ -42,7 +42,7 @@ const acrCloudConfig = {
 // URL del stream de audio & ruta API
 // const streamUrl = "https://a6.asurahosting.com:7340/radio.mp3";
 const streamUrl = streamHostUrl;
-const API = `http://localhost:${port}/api`;
+const API = `http://64.227.11.166:${port}/api`;
 
 // Ruta al archivo de credenciales de Google Cloud
 const googleCredentialsPath = "src/secrets/key.json";
