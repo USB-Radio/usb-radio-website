@@ -7,16 +7,24 @@ import "../styles/audioPlayer.css";
 function AudioPlayer() {
   const { radioData } = useData();
   const {
-    listenUrl,
-    totalListeners,
+    listenUrl = "https://a6.asurahosting.com:7340/radio.mp3",
+    totalListeners = 0,
     currentPlaying: {
-      duration,
-      elapsed,
-      song: { title, artist, album, art },
-      playlist,
-    },
-    nextPlaying: { text: nextSongText, art: nextSongArt },
-  } = radioData;
+      duration = 0,
+      elapsed = 0,
+      song: {
+        title = "No estamos al aire 😞",
+        artist = "pronto volveremos.... ",
+        album = "No hay datos",
+        art = "/images/favicon.png",
+      } = {},
+      playlist = "Servicio no disponible",
+    } = {},
+    nextPlaying: {
+      text: nextSongText = "No hay proxima canción",
+      art: nextSongArt = "/images/favicon.png",
+    } = {},
+  } = radioData || {};
 
   const coverImage = art ? art : "/images/favicon.png";
   const endTime = formatTime(duration);
