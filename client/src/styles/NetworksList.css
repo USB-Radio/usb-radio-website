@@ -3,7 +3,7 @@
   position: fixed;
   top: 32%;
   right: 0;
-  /* z-index: 1; */
+  z-index: 2;
 }
 .social-icons-list {
   display: flex;
@@ -14,11 +14,11 @@
 }
 .icon-block {
   background-color: var(--color-secondary);
-  padding-inline: 1rem;
-  padding-block: 1rem;
+  padding-inline: 0.8rem;
+  padding-block: 0.8rem;
   line-height: 1rem;
   color: var(--color-white);
-  font-size: 2rem;
+  font-size: 1.8rem;
   transition: 0.3s;
   cursor: pointer;
   a {

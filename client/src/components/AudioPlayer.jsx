@@ -1,4 +1,9 @@
-import { FaHeadphones, FaVolumeUp } from "react-icons/fa";
+import {
+  FaHeadphones,
+  FaVolumeUp,
+  FaVolumeDown,
+  FaVolumeMute,
+} from "react-icons/fa";
 import { useData } from "../context/radioContext";
 import { useState, useRef } from "react";
 import { formatTime } from "../utils/formatTime";
@@ -9,9 +14,8 @@ function AudioPlayer() {
   const [volume, setVolume] = useState(1);
   const { radioData } = useData();
   const audioRef = useRef(null);
-
   const {
-    listenUrl = "https://a6.asurahosting.com:7340/radio.mp3",
+    listenUrl = "#",
     totalListeners = 0,
     currentPlaying: {
       duration = 0,
@@ -25,10 +29,13 @@ function AudioPlayer() {
       playlist = "Servicio no disponible",
     } = {},
   } = radioData || {};
-
   const endTime = formatTime(duration);
   const startTime = formatTime(elapsed);
-
+  const getVolumeIcon = () => {
+    if (volume === 0) return <FaVolumeMute />;
+    if (volume < 0.5) return <FaVolumeDown />;
+    return <FaVolumeUp />;
+  };
   const handleButtonClick = () => {
     if (isPaused) {
       audioRef.current.src = listenUrl;
@@ -38,13 +45,11 @@ function AudioPlayer() {
     }
     setIsPaused(!isPaused);
   };
-
   const handleVolumeChange = (e) => {
     const newVolume = parseFloat(e.target.value);
     setVolume(newVolume);
     audioRef.current.volume = newVolume;
   };
-
   return (
     <section className="muplayer">
       <audio ref={audioRef} src={listenUrl}></audio>
@@ -84,9 +89,7 @@ function AudioPlayer() {
                 <span></span>
               </button>
               <div className="volume-slider">
-                <div className="volume-icon">
-                  <FaVolumeUp />
-                </div>
+                <div className="volume-icon">{getVolumeIcon()}</div>
                 <input
                   type="range"
                   min="0"

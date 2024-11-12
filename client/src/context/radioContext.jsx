@@ -12,7 +12,7 @@ export const DataProvider = ({ children }) => {
     const fetchData = async () => {
       const monitor = (await monitorDataRequest()).data;
       const radio = (await azuraDataRequest()).data;
-      console.log("1) monitor ->", monitor);
+      // console.log("1) monitor ->", monitor);
 
       setMonitorData(monitor);
       setRadioData(radio);

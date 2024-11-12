@@ -1,44 +1,43 @@
-import { FaMusic } from "react-icons/fa6";
-// import { formatTime } from "../utils/formatTime";
-// import "../styles/SongHistory.css";
+import { useData } from "../context/radioContext";
+import { formatTime } from "../utils/formatTime";
+import "../styles/SongHistory.css";
 
 function SongHistory() {
+  const { radioData } = useData();
+  if (!radioData || !radioData.songHistory) {
+    return <div>Loading...</div>;
+  }
+
+  // Convierte songHistory en una lista si es un objeto
+  const songHistory = Array.isArray(radioData.songHistory)
+    ? radioData.songHistory
+    : Object.values(radioData.songHistory);
+
+  // Duplicamos el contenido para el efecto de bucle
+  const duplicatedSongHistory = [...songHistory, ...songHistory];
+
   return (
-    <section className="history">
-      <div className="history-container">
-        <div className="history-title">
-          <i>
-            <FaMusic />
-          </i>
-          <p>Historial de Reproducción</p>
-        </div>
-        <div className="history-songs-info">
-          {/* {songHistory.map((song, index) => (
-            <div key={index} className="history-songs">
-              <div className="history-song-data">
-                <span>{index + 1}</span>
-                <div
-                  className="history-art"
-                  style={{
-                    backgroundImage: `url(${song.art})`,
-                  }}
-                ></div>
-                <div className="history-artist-content">
-                  <p className="history-titlesong">{song.title}</p>
-                  <p className="history-artistsong">{song.artist}</p>
+    <div className="song-container">
+      <div className="carousel-song-list">
+        {duplicatedSongHistory.map((song, index) => {
+          const newTime = formatTime(song.duration);
+          return (
+            <div className="song-card" key={index}>
+              <div className="song-artwork">
+                <img src={song.art} alt="portadas" />
+              </div>
+              <div className="song-card-items">
+                <p className="song-card-title">{song.title}</p>
+                <div className="song-card-timestep">
+                  <p>{song.artist}</p>
+                  <span>{newTime}</span>
                 </div>
               </div>
-              <div className="history-album">
-                <p>{song.album}</p>
-              </div>
-              <div className="history-time">
-                <p>{formatTime(song.duration)}</p>
-              </div>
             </div>
-          ))} */}
-        </div>
+          );
+        })}
       </div>
-    </section>
+    </div>
   );
 }
 

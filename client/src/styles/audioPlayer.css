@@ -1,14 +1,16 @@
 .muplayer {
   position: relative;
   width: 100%;
-  padding: 3rem;
-  margin-top: 6rem;
-  background: linear-gradient(
+  padding-top: 7.8rem;
+  padding-bottom: 1.2rem;
+  /* margin-top: 6.2rem; */
+  /* background: linear-gradient(
       to bottom,
       rgba(13, 17, 40, 0.6),
       rgba(13, 17, 40, 0.6)
     ),
-    url("/images/Universidad.jpg") fixed no-repeat;
+    url("/images/Universidad.jpg") fixed no-repeat; */
+  backdrop-filter: blur(0.05rem);
   background-size: cover;
 }
 .muplayer-container {
@@ -31,7 +33,7 @@
   );
   justify-content: space-between;
   border-radius: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.81rem;
   font-weight: 500;
 }
 .muplayer-playlist {
@@ -64,7 +66,7 @@
   box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.6);
 }
 .songcover-field {
-  padding: 1rem;
+  padding: 0.6rem;
 }
 .songcover {
   width: 10rem;
@@ -95,7 +97,7 @@
   width: 100%;
   text-align: center;
   text-shadow: 1px 1px 5px var(--color-secondary);
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 500;
   transition: 0.3s;
 }
@@ -103,8 +105,10 @@
   width: 100%;
   text-align: center;
   text-shadow: 1px 1px 5px var(--color-secondary);
-  font-size: 1.6rem;
+  font-size: 1.3rem;
+  font-style: italic;
   font-weight: 500;
+  padding-block: 0.15rem;
   transition: 0.3s;
 }
 .muplayer-playitems {
@@ -113,7 +117,8 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
-  padding-block: 1rem;
+  padding-block: 0.84rem 1.1rem;
+  padding-inline: 1rem;
   /* background-color: red; */
 }
 .muplayer-play-btn {
@@ -121,8 +126,8 @@
   box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.9);
   position: relative;
   flex-shrink: 0;
-  width: 3.8rem;
-  height: 3.8rem;
+  width: 3.3rem;
+  height: 3.3rem;
   border-radius: 100vh;
   border: none;
   background-color: var(--color-secondary);
@@ -164,7 +169,7 @@
   clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
 }
 .seek-bar {
-  -webkit-appearance: none;
+  appearance: none;
   width: 100%;
   height: 7px;
   border: none;
@@ -173,7 +178,7 @@
   overflow: hidden;
 }
 .seek-bar::-webkit-slider-thumb {
-  -webkit-appearance: none;
+  appearance: none;
   width: 1px;
   height: 20px;
   box-shadow: -400px 0 0 400px var(--color-main);
@@ -184,7 +189,7 @@
   width: 30%;
   display: flex;
   align-items: center;
-  padding-inline: 1rem;
+  padding-inline: 0rem;
   gap: 1rem;
 }
 .volume-icon {
@@ -193,13 +198,14 @@
 .muplayer-genre {
   width: 45%;
   color: var(--color-main);
-  font-weight: 500;
-  font-size: 1.2rem;
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 .muplayer-genretype {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--color-white);
   font-weight: 500;
+  font-style: italic;
 }
 .song-slider {
   padding-inline: 1rem;
@@ -210,7 +216,9 @@
 }
 .muplayer-timers {
   display: flex;
-  font-size: 0.9rem;
+  align-items: center;
+  padding-top: 0.6rem;
+  font-size: 0.82rem;
   justify-content: space-between;
 
   .live-status {

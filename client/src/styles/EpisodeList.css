@@ -1,0 +1,77 @@
+.episodes-playlist {
+  padding: 1rem;
+  background: linear-gradient(
+      to bottom,
+      rgba(13, 17, 40, 0.6),
+      rgba(13, 17, 40, 0.6)
+    ),
+    url("/images/Universidad2.jpg") fixed no-repeat;
+  background-size: cover;
+}
+.episodes-playlist-container {
+  color: var(--color-white);
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  max-width: 1000px;
+  height: 19rem;
+  margin: 0 auto;
+  padding-right: 10px;
+  border-radius: 10px;
+}
+
+.episodes-playlist-container::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.episodes-playlist-container::-webkit-scrollbar-track {
+  background: #1d2550;
+  border-radius: 4px;
+  border: none;
+}
+
+.episodes-playlist-container::-webkit-scrollbar-thumb {
+  background: #ec9f1d;
+  border-radius: 5px;
+}
+
+.episode-card {
+  font-size: 0.93rem;
+  background: linear-gradient(
+    178.1deg,
+    rgba(13, 17, 40, 0.4) 8.5%,
+    rgba(13, 17, 40, 0.55) 82.4%
+  );
+  backdrop-filter: blur(0.2rem);
+  box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.6);
+  padding: 0.8rem;
+  margin-block: 0.6rem;
+  border: 1.3px solid var(--color-white);
+  border-radius: 10px;
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
+  p {
+    font-weight: 500;
+  }
+  span {
+    color: #ced6e4;
+  }
+  .play-episode-button {
+    cursor: pointer;
+    background-color: #ec9f1d;
+    border: none;
+    border-radius: 4px;
+    color: var(--color-black);
+    font-weight: 600;
+    margin-top: 0.5rem;
+    padding-block: 0.2rem;
+    padding-inline: 0.6rem;
+    transition: 200ms;
+  }
+  .play-episode-button:hover {
+    background-color: #ac771c;
+    color: var(--color-white);
+  }
+}
