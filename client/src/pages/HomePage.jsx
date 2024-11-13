@@ -10,7 +10,7 @@ function HomePage() {
     <div>
       <Navbar />
       <AudioPlayer />
-      {/* <RadioPage /> */}
+      <RadioPage />
       <NetworksList />
       <SliderCards />
       <Footer />
