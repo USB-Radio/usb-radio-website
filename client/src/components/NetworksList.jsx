@@ -43,15 +43,7 @@ export function NetworksList() {
             <FaSpotify />
           </a>
         </div>
-        <div className="icon-block">
-          <a
-            href="https://www.deezer.com/search/USB%20Radio/show"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaDeezer />
-          </a>
-        </div>
+
         <div className="icon-block">
           <a
             href="https://www.spreaker.com/user/usb-radio--8429931"

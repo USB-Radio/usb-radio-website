@@ -32,7 +32,7 @@ function SongInfo({
 
   return (
     <div>
-      <h2 className="radio-page-artistDateTitle">Datos del Artista</h2>
+      <h2 className="radio-page-artistDateTitle">Información del Artista</h2>
       <div className="Song-boxInfo">
         <h3>{songTitle}</h3>
         <h4>{artistName}</h4>
@@ -46,6 +46,7 @@ function SongInfo({
         </div>
         <p>{releaseDate}</p>
       </div>
+      <h2 className="radio-page-artistDateTitle">Redes del Artista</h2>
       <div className="social-networks-buttons">
         {/* Filtramos solo las redes sociales que queremos */}
         {externalLinks?.items
