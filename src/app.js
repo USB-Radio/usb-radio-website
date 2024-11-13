@@ -9,7 +9,7 @@ const app = express();
 app.use(
   cors({
     // origin: "http://localhost:5173",
-    origin: "http://radiousbbog.tech:5173",
+    origin: "http://radiousbbog.tech",
   })
 );
 app.use(morgan("dev"));
