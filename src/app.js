@@ -8,7 +8,8 @@ const app = express();
 //middlewares
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    // origin: "http://localhost:5173",
+    origin: "http://radiousbbog.tech:5173",
   })
 );
 app.use(morgan("dev"));
