@@ -1,0 +1,54 @@
+.biography-container {
+  width: 100%;
+  .bio-infoText {
+    line-height: 1.6;
+  }
+}
+.ArtistBio-Cover {
+  border-radius: 10px;
+  margin-block: 0.4rem;
+  width: 8rem;
+  height: auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+.ArtistBio-Cover:hover {
+  transform: translateY(-5px);
+}
+.bio-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.Bio-info {
+  p {
+    padding-block: 1px;
+    color: #40414e;
+  }
+}
+.biography-text {
+  border-top: 1px solid rgba(38, 53, 116, 0.1);
+  color: #696b7e;
+  padding-top: 0.5rem;
+}
+
+.bio-spotify {
+  cursor: pointer;
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+  margin-left: 1.5rem;
+  font-size: 3rem;
+  transition: transform 0.3s ease;
+}
+.bio-spotify:hover {
+  cursor: pointer;
+  color: #1db954;
+  transform: translateY(-5px);
+}
+.bio-card {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}

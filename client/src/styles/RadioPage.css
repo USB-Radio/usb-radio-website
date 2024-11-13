@@ -15,69 +15,89 @@
   }
 }
 .radio-page-background {
-  /* background-color: #f2f2f2; */
   background-color: #ffffff;
 }
-.radio-page-container {
+.radio-page-container-1 {
   background-color: #ffffff;
-  /* width: 1000px; */
-  /* margin: 0 auto; */
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: center;
   gap: 1rem;
   padding: 1rem;
   color: #111827;
 }
-.left-content {
-  /* background-color: red; */
+.radio-page-container-2 {
+  padding-inline: 5rem;
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  align-items: center;
+  .ArtistBio {
+    width: 50%;
+    padding-inline: 2rem;
+    /* background-color: red; */
+  }
+}
+.container-main-img {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
-  gap: 1rem;
+  padding-right: 0.3rem;
 }
-.right-content {
-  background-color: #7a7c93;
+.main-img {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  width: 10rem;
+  height: auto;
+  transition: transform 0.3s ease;
 }
-.radio-page-artistDateTitle {
-  font-weight: 700;
-  border-bottom: 4px solid var(--color-secondary);
-  width: 100%;
+.main-img:hover {
+  transform: translateY(-5px);
 }
 
-.Song-boxInfo {
-  padding: 1rem;
-  background-color: var(--color-white);
-  border: 2px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  h3 {
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    color: var(--color-secondary);
-  }
-  h4 {
-    font-weight: 500;
-    letter-spacing: 0.3px;
-    padding-bottom: 5px;
-  }
-  p {
-    color: #7a7c93;
-    font-weight: 400;
-  }
-  span {
-    font-weight: 500;
-    color: #7a7c93;
+@media only screen and (max-width: 2000px) {
+  .radio-page-container-2 {
+    /* padding-inline: 5rem; */
+    .ArtistBio {
+      width: 34%;
+      /* background-color: red; */
+      /* background-color: red; */
+    }
   }
 }
-.Song-boxInfo-album {
-  display: flex;
-  gap: 5px;
-  width: 100%;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+@media only screen and (max-width: 1889px) {
+  .radio-page-container-2 {
+    /* padding-inline: 5rem; */
+    .ArtistBio {
+      width: 36%;
+      /* background-color: red; */
+      /* background-color: red; */
+    }
+  }
 }
-.Song-boxInfo-genre {
-  display: flex;
-  gap: 5px;
-  width: 100%;
+@media only screen and (max-width: 1440px) {
+  .radio-page-container-2 {
+    /* padding-inline: 5rem; */
+    .ArtistBio {
+      width: 50%;
+      /* background-color: red; */
+    }
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .radio-page-container-2 {
+    /* padding-inline: 5rem; */
+    .ArtistBio {
+      width: 50%;
+      /* background-color: red; */
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .radio-page-container-2 {
+    padding-inline: 0rem;
+    .ArtistBio {
+      width: 50%;
+      /* background-color: red; */
+    }
+  }
 }

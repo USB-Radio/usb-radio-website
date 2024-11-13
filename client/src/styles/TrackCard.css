@@ -1,0 +1,53 @@
+.album-cover-art-single {
+  width: 4rem;
+  height: auto;
+  margin-right: 1rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+.album-cover-art-single:hover {
+  width: 4rem;
+  transform: translateY(-5px);
+}
+.albums-card {
+  border-radius: 10px;
+  background: linear-gradient(
+    178.1deg,
+    rgba(29, 35, 71, 0.9) 8.5%,
+    rgba(13, 17, 40, 0.95) 82.4%
+  );
+  backdrop-filter: blur(0.2rem);
+  color: #f3f6fc;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  height: 17rem;
+  padding: 0.5rem;
+  p {
+    font-weight: 600;
+    margin-left: 1rem;
+    margin-right: 2rem;
+  }
+}
+.album-set {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem;
+}
+.albums-card::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.albums-card::-webkit-scrollbar-track {
+  background: #1d2550;
+  border-radius: 4px;
+  border: none;
+}
+
+.albums-card::-webkit-scrollbar-thumb {
+  background: var(--color-main);
+  border-radius: 5px;
+}

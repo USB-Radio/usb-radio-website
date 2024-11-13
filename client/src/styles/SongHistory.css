@@ -1,5 +1,6 @@
 .song-container {
-  width: 70%;
+  width: 100%;
+  padding-bottom: 1rem;
   /* background-color: red; */
 }
 
@@ -14,8 +15,8 @@
 .carousel-song-list {
   width: 100%;
   padding: 0.5rem;
-  /* border: 2px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); */
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   /* background-color: blue; */
 }
 .song-artwork {
@@ -32,10 +33,16 @@
     height: auto;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease; /* Suaviza el efecto de salto */
+  }
+  img:hover {
+    transform: translateY(-5px); /* Hace que suba ligeramente */
   }
 }
+
 .song-artistData {
   .song-card-title {
+    width: 140px;
     font-weight: 500;
     letter-spacing: 0.5px;
     color: var(--color-secondary);
@@ -51,7 +58,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.4rem;
-  border-top: 1px solid rgba(38, 53, 116, 0.2);
+  border-top: 1px solid rgba(38, 53, 116, 0.1);
 }
 .song-card-album {
   width: 40%;
@@ -62,4 +69,35 @@
 .song-card-time {
   padding-inline: 1rem;
   font-weight: 200;
+}
+
+@media only screen and (max-width: 2000px) {
+  .song-container {
+    width: 90%;
+    /* background-color: red; */
+  }
+}
+@media only screen and (max-width: 1889px) {
+  .song-container {
+    width: 90%;
+    /* background-color: red; */
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .song-container {
+    width: 95%;
+    /* background-color: red; */
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .song-container {
+    width: 80%;
+    /* background-color: red; */
+  }
+}
+@media only screen and (max-width: 768px) {
+  .song-container {
+    width: 90%;
+    /* background-color: red; */
+  }
 }
