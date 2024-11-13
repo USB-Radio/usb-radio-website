@@ -38,7 +38,7 @@
 .container-footer {
   padding-block: 0.5rem;
   padding-left: 1.2rem;
-  font-size: 0.82rem;
+  font-size: 1rem;
   background-color: var(--color-secondary);
   color: var(--color-white);
   box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.4);
@@ -52,7 +52,7 @@
 .footer-copyright {
   gap: 0.2rem;
   display: flex;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   align-items: center;
   justify-content: center;
   padding-block: 0.5rem;

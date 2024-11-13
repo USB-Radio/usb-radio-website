@@ -1,14 +1,34 @@
+.slider-cards-title {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-block: 0.5rem;
+  gap: 0.5rem;
+  width: 100%;
+  background-color: var(--color-secondary-darker);
+  color: var(--color-white);
+  p {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+  i {
+    font-size: 1.6rem;
+  }
+}
+
 .slider-cards {
-  background-color: #080e18;
+  /* background-color: #080e18; */
+  background-color: var(--color-secondary-darker);
   padding-inline: 1.58rem;
   padding-bottom: 1.58rem;
   padding-top: 1.2rem;
   /* border-top: 2px solid var(--color-white); */
-  border-bottom: 2px solid var(--color-white);
+  /* border-bottom: 2px solid var(--color-white); */
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.6);
+  /* box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.6); */
 }
 .slider-prev-button {
   border-radius: 50%;
@@ -48,7 +68,8 @@
 .show-card {
   box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.6);
   background-color: #1d2139;
-  border: 1px solid rgba(187, 216, 240, 0.3);
+  /* border: 1px solid rgba(187, 216, 240, 0.3); */
+  border: none;
   color: #9ca3af;
   color: #bbcbe6;
   border-radius: 1rem;

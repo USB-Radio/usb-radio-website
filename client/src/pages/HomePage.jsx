@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import AudioPlayer from "../components/AudioPlayer";
 import SliderCards from "../components/SliderCards";
 import Footer from "../components/Footer";
-import SongHistory from "../components/SongHistory";
+import RadioPage from "../components/RadioPage";
 import { NetworksList } from "../components/NetworksList";
 
 function HomePage() {
@@ -10,7 +10,7 @@ function HomePage() {
     <div>
       <Navbar />
       <AudioPlayer />
-      <SongHistory />
+      {/* <RadioPage /> */}
       <NetworksList />
       <SliderCards />
       <Footer />

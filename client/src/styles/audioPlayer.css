@@ -1,8 +1,8 @@
 .muplayer {
   position: relative;
   width: 100%;
-  padding-top: 7.8rem;
-  padding-bottom: 1.2rem;
+  padding-top: 10rem;
+  padding-bottom: 3rem;
   /* margin-top: 6.2rem; */
   /* background: linear-gradient(
       to bottom,
@@ -10,7 +10,7 @@
       rgba(13, 17, 40, 0.6)
     ),
     url("/images/Universidad.jpg") fixed no-repeat; */
-  backdrop-filter: blur(0.05rem);
+  /* backdrop-filter: blur(0.08rem); */
   background-size: cover;
 }
 .muplayer-container {
@@ -23,7 +23,7 @@
   flex-wrap: wrap;
   align-items: center;
   padding-inline: 1rem;
-  padding-block: 0.2rem;
+  padding-block: 0.4rem;
   border: 2px solid var(--color-white);
   box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.6);
   background: linear-gradient(
@@ -33,7 +33,7 @@
   );
   justify-content: space-between;
   border-radius: 1rem;
-  font-size: 0.81rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 .muplayer-playlist {
@@ -69,8 +69,8 @@
   padding: 0.6rem;
 }
 .songcover {
-  width: 10rem;
-  height: 10rem;
+  width: 11rem;
+  height: 11rem;
   position: relative;
   background-size: cover;
   border-radius: 50%;
@@ -97,7 +97,7 @@
   width: 100%;
   text-align: center;
   text-shadow: 1px 1px 5px var(--color-secondary);
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   font-weight: 500;
   transition: 0.3s;
 }
@@ -105,7 +105,7 @@
   width: 100%;
   text-align: center;
   text-shadow: 1px 1px 5px var(--color-secondary);
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-style: italic;
   font-weight: 500;
   padding-block: 0.15rem;

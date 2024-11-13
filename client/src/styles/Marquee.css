@@ -4,7 +4,7 @@
 }
 
 .marquee-wrapper {
-  font-size: 0.81rem;
+  font-size: 0.9rem;
   padding-block: 4px;
   border-block: 1px solid var(--color-secondary);
   background-color: var(--color-secondary);
@@ -31,11 +31,11 @@
   justify-content: space-between;
   gap: var(--gap);
   margin: 0 auto;
-  animation: scroll 80s linear infinite;
+  animation: scrollMarquee 80s linear infinite;
   font-weight: 500;
 }
 
-@keyframes scroll {
+@keyframes scrollMarquee {
   to {
     transform: translateX(calc(-100% - var(--gap)));
   }

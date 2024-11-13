@@ -12,6 +12,7 @@ import {
   FaMicrophone,
   FaSpotify,
   FaHome,
+  FaMugHot,
 } from "react-icons/fa";
 import "../styles/navbar.css";
 import { Marquee } from "./Marquee";
@@ -55,19 +56,19 @@ function Navbar() {
       <div className="navbar-links">
         <img src="/images/Logo-radio.png" alt="Logo" />
         <nav ref={navRef}>
-          <div>
+          <div className="navbar-divs">
             <i>{<FaHome />}</i>
             <a href="/#">Inicio</a>
           </div>
-          <div>
+          <div className="navbar-divs">
             <i>{<FaBroadcastTower />}</i>
             <a href="/#">Nosotros</a>
           </div>
-          <div>
+          <div className="navbar-divs">
             <i>{<FaBullhorn />}</i>
             <a href="/#">Noticias</a>
           </div>
-          <div>
+          <div className="navbar-divs">
             <i>{<FaHeadset />}</i>
             <a href="/#">Programas</a>
           </div>
@@ -75,6 +76,12 @@ function Navbar() {
             <FaTimes />
           </button>
         </nav>
+        <div className="nav-decor-message">
+          <i>
+            <FaMugHot />
+          </i>
+          <p> Ponle Play</p>
+        </div>
         <button className="nav-btn" onClick={showNavbar}>
           <FaBars />
         </button>

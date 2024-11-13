@@ -4,7 +4,12 @@ import {
   spreakerEpisodesRequest,
 } from "../api/monitorMetadata";
 import { radioEpisodes } from "../utils/show_episodes";
-import { FaAngleLeft, FaAngleRight, FaArrowPointer } from "react-icons/fa6";
+import {
+  FaAngleLeft,
+  FaAngleRight,
+  FaArrowPointer,
+  FaCommentDots,
+} from "react-icons/fa6";
 import EpisodeList from "./EpisodeList";
 import "../styles/SliderCards.css";
 
@@ -41,6 +46,12 @@ function SliderCards() {
   }, []);
   return (
     <div>
+      <div className="slider-cards-title">
+        <p> Programas</p>
+        <i>
+          <FaCommentDots />
+        </i>
+      </div>
       <div className="slider-cards">
         <div>
           <button onClick={handleLeftClick} className="slider-prev-button">
