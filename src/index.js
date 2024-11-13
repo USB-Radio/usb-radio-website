@@ -2,7 +2,7 @@ import { port } from "./config.js";
 import app from "./app.js";
 import chalk from "chalk";
 import figlet from "figlet";
-import "./scripts/acrcloud_monitor.js";
+// import "./scripts/acrcloud_monitor.js";
 
 const main = () => {
   app.listen(port, () => {

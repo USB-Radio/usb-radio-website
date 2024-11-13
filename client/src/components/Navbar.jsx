@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useRef } from "react";
 import {
   FaBars,
@@ -30,10 +31,26 @@ function Navbar() {
         <div className="follow-box">
           <p className="bold">Siguenos en:</p>
           <div className="follow-icons">
-            <i>{<FaInstagram />}</i>
-            <i>{<FaSpotify />}</i>
-            <i>{<FaDeezer />}</i>
-            <i>{<FaMicrophone />}</i>
+            <a
+              href="https://www.instagram.com/usb_radio?igsh=YW56ZGZzYTR6dG1k"
+              target="_blank"
+            >
+              <i>{<FaInstagram />}</i>
+            </a>
+            <a
+              href="https://open.spotify.com/show/6PXeoziWiDG7nDO9IqO4lg?si=d3812d8504474e6a"
+              target="_blank"
+            >
+              {" "}
+              <i>{<FaSpotify />}</i>
+            </a>
+            <a
+              href="https://www.spreaker.com/user/usb-radio--8429931"
+              target="_blank"
+            >
+              {" "}
+              <i>{<FaMicrophone />}</i>
+            </a>
           </div>
         </div>
         <div className="info-box">
@@ -56,21 +73,24 @@ function Navbar() {
       <div className="navbar-links">
         <img src="/images/Logo-radio.png" alt="Logo" />
         <nav ref={navRef}>
-          <div className="navbar-divs">
-            <i>{<FaHome />}</i>
-            <a href="/#">Inicio</a>
-          </div>
+          <Link to="/">
+            {" "}
+            <div className="navbar-divs">
+              <i>{<FaHome />}</i>
+              Inicio
+            </div>
+          </Link>
           <div className="navbar-divs">
             <i>{<FaBroadcastTower />}</i>
-            <a href="/#">Nosotros</a>
+            <Link to="/nosotros">Nosotros</Link>
           </div>
-          <div className="navbar-divs">
+          {/* <div className="navbar-divs">
             <i>{<FaBullhorn />}</i>
             <a href="/#">Noticias</a>
-          </div>
+          </div> */}
           <div className="navbar-divs">
             <i>{<FaHeadset />}</i>
-            <a href="/#">Programas</a>
+            <Link to="/programas">Programas</Link>
           </div>
           <button className="nav-btn nav-close-btn" onClick={showNavbar}>
             <FaTimes />

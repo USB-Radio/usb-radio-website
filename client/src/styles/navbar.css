@@ -26,6 +26,14 @@
     display: flex;
     flex-wrap: nowrap;
     margin-inline: 0.8rem;
+    a {
+      text-decoration: none;
+      color: var(--color-white);
+    }
+    a:visited {
+      text-decoration: none;
+      color: var(--color-white);
+    }
     i {
       font-size: 1.4rem;
       margin-inline: 0.23rem;

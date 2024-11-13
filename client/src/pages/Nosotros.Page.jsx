@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-function ProgramasPage() {
+function NosotrosPage() {
   return (
     <div>
       <Navbar />
@@ -10,4 +10,4 @@ function ProgramasPage() {
   );
 }
 
-export default ProgramasPage;
+export default NosotrosPage;
