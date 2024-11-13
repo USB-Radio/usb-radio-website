@@ -133,7 +133,7 @@ function RadioPage() {
           <AlbumMeta albumMetadata={albumMetadata} />
         </div>
         <div className="ArtistAlbums-component">
-          <AlbumsCard albumMetadata={albumMetadata} />
+          {albumMetadata ? <AlbumsCard albumMetadata={albumMetadata} /> : null}
         </div>
       </div>
       <div className="radio-page-container-2">

@@ -1,0 +1,60 @@
+.presentation-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.presentation-card-layout {
+  width: 1000px;
+  /* height: 10rem; */
+  border-radius: 10px;
+  background: linear-gradient(
+    178.1deg,
+    rgba(13, 17, 40, 0.8) 8.5%,
+    rgba(13, 17, 40, 0.8) 82.4%
+  );
+  backdrop-filter: blur(0.08rem);
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+}
+.pres-card-title {
+    text-align: center;
+  padding: 1rem;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: var(--color-white);
+}
+.pres-card-cont {
+  display: flex;
+  flex-direction: column;
+}
+.pres-card-info-img {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-inline: 1rem;
+  img {
+    border-radius: 20px;
+    border: none;
+    width: 26rem;
+    height: auto;
+    padding-bottom: 1.2rem;
+  }
+}
+.pres-card-info {
+  font-weight: 300;
+  width: 100%;
+  padding-bottom: 0.5rem;
+}
+.pres-car-sub-title {
+  padding-block: 0.5rem;
+  font-weight: 500;
+}
+.list-names {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; 
+
+.list-names li {
+  margin-left: 0; 
+}

@@ -80,18 +80,22 @@ function Navbar() {
               Inicio
             </div>
           </Link>
-          <div className="navbar-divs">
-            <i>{<FaBroadcastTower />}</i>
-            <Link to="/nosotros">Nosotros</Link>
-          </div>
+          <Link to="/nosotros">
+            <div className="navbar-divs">
+              <i>{<FaBroadcastTower />}</i>
+              Nosotros
+            </div>
+          </Link>
           {/* <div className="navbar-divs">
             <i>{<FaBullhorn />}</i>
             <a href="/#">Noticias</a>
           </div> */}
-          <div className="navbar-divs">
-            <i>{<FaHeadset />}</i>
-            <Link to="/programas">Programas</Link>
-          </div>
+          <Link to="/programas">
+            <div className="navbar-divs">
+              <i>{<FaHeadset />}</i>
+              Programas
+            </div>
+          </Link>
           <button className="nav-btn nav-close-btn" onClick={showNavbar}>
             <FaTimes />
           </button>
