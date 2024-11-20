@@ -15,6 +15,7 @@ COPY . .
 
 # Expone el puerto para el backend
 EXPOSE 3000
+EXPOSE 5173
 
 # Comando para ejecutar el servidor
 CMD ["npm", "start"]
