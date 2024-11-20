@@ -51,4 +51,12 @@ debemos verificar que en ambos recursos sea **200** tanto para /api/radio y /api
 que los datos estan siendo recibidos por el frontend con exito. Un **304** solo indica que no se ha actualizado
 pero el que debemos tener precaución es con el **404** que nos inidica que hubo un error.
 
-![alt text](image.png)
+![alt text](./client/public/images/readme-img/consola.png)
+
+Si estas trabajando desde local si consultas la ruta _http://localhost:3000/api/radio_ mediante petición **GET**
+deberias obtener un JSON con la metadata de la radio de AzuraCast, *http://radiousbbog.tech:3000/api/radio* desde
+el servidor de ocean digital.
+
+Desde Postman podemos verificar si las peticiones estan siendo realizadas de forma correcta, **(nota: solo va a funcionar si el servidor esta activo)**
+
+![alt text](./client/public/images/readme-img/image.png)
