@@ -63,4 +63,8 @@ Desde Postman podemos verificar si las peticiones estan siendo realizadas de for
 
 ![alt text](./client/public/images/readme-img/image.png)
 
-Si desde postman verificamos que la petición es correcta y el servicio aun no comunica, debemos considerar dos problemas.
+Si desde postman verificamos que la petición es correcta y estamos recibiendo un JSON pero el servicio aun no comunica,
+debemos considerar dos problemas.
+
+1. Problemas entre la comunicación entre el dominio de Vite **"http://localhost:5173"** (frontend) y el backend **http://localhost:3000**
+   esto en dado caso de ser ejecutado desde local, si es desde el servidor seria reemplazar el dominio por **\*http://radiousbbog.tech**
