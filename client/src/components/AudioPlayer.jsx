@@ -15,7 +15,7 @@ function AudioPlayer() {
   const { radioData } = useData();
   const audioRef = useRef(null);
   const {
-    listenUrl = "https://a6.asurahosting.com:7340/radio.mp3",
+    listenUrl = "https://a6.asurahosting.com/api/nowplaying/usb_radio",
     totalListeners = 0,
     currentPlaying: {
       duration = 0,
