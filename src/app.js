@@ -10,6 +10,7 @@ app.use(
   cors({
     // origin: "http://localhost:5173",
     origin: "http://radiousbbog.tech:5173",
+    origin: "http://radiousbbog.tech:3000",
   })
 );
 app.use(morgan("dev"));
