@@ -19,24 +19,24 @@ En este archivo se encuentra
 
 > si se quiere modificar el puerto del backend, solamente modificar la varible PORT en el archivo.env
 
-Desde la carpeta index.js se levanta la ejecución de todo el servidor. Para poder habilitar el codigo de
-acrcloud_monitor.js se debe descomentar la linea donde se esta importando.
+Desde el archivo **index.js** se levanta la ejecución de todo el servidor. Para poder habilitar el codigo de
+**acrcloud_monitor.js** se debe descomentar la linea donde se esta importando.
 
 Se encuentra comentado para no hacer uso de ella, ya que el servicio tiene un limite diario de peticiones que se
 pueden realizar, por motivos de pruebas tecnicas se hace esto para no consumir todas las peticiones del servicio.
 
 ![imports en archivo index](./client/public/images/readme-img/imports.png)
 
-El archivo app.js es donde establece el uso de las rutas y permisos del servidor, haciendo uso de express
+El archivo **app.js** es donde establece el uso de las rutas y permisos del servidor, haciendo uso de express
 permite definir las rutas de la API:
 
 cors es un middleware que permite o restrige los recursos de un servidor entre dominios.
 el dominio del frontend al estar utilizando Vite es _"http://localhost:5173"_ en su defecto
 si se esta trabajando desde local. Para poder utilizar el servidor en el dominio de oceandigital
-, esta comentaod, siendo este *http://radiousbbog.tech*, habilitar el dominio al cual se
+, esta comentado, siendo este *http://radiousbbog.tech*, habilitar el dominio al cual se
 quiera utilizar para hacer pruebas, el primero solo funciona para ejecutarse en local y realizar pruebas.
 
-> Nota: Puede que el segundo dominio le falte el puerto, vite utiliza por defecto el puerto 5173, por lo que seria probar si funciona con http://radiousbbog.tech:5173
+> Nota: Puede que el segundo dominio le falte el puerto. Vite utiliza por defecto el puerto 5173, por lo que seria probar si funciona con http://radiousbbog.tech:5173
 
 ![alt text](./client/public/images/readme-img/app.png)
 
@@ -48,7 +48,7 @@ Las rutas que se definen son las siguientes.
 
 # Ruta /api/radio
 
-Esta recibe los datos de la api de radio de AzuraCast, con un servicio como postman podemos verificar
+Esta recibe los datos de la api de radio de AzuraCast, con un servicio como **postman** podemos verificar
 si las peticiones estan siendo recibidas de forma correcta. Adicionalmente haciendo uso de la libreria de
 morgan, levantando el servidor ya sea: desde entorno de desarrollo **npm run dev** ó producción **npm start**
 podemos ver desde la consola si las peticiones estan siendo realizadas con exito.
