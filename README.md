@@ -131,15 +131,20 @@ Esto puede ser por que ambos dominios no se pueden comunicar, el error se puede 
 
 Una vez solucionado esto se deberia poder visualizar las canciones, y el contenido en el player de la radio.
 
-2. Si el problema persiste verificar que las peticiones que realiza el frontend el dominio sea el correcto. Esto dominio es el del servidor backend, el del puerto 3000 en su defecto.
+2. Si el problema persiste verificar que las peticiones que realiza el frontend el dominio sea el correcto. Este dominio es el del servidor backend, el del puerto 3000 en su defecto.
 
-3. El archivo acr_cloudmonitor.js tambien tiene dos constantes que estan definidas si se
+3. El archivo acr*cloudmonitor.js tambien tiene dos constantes que estan definidas si se
    esta desarrollando en local o en el servidor, esto es mas con respecto a la informacion que se
-   recibe de /api/data, es decir la informacion que procesa el codigo que identifica si es de Google Speech to Text ó de ACR Cloud. Modificar según si se esta trabajando en local o en producción
+   recibe de /api/data, es decir la informacion que procesa el codigo que identifica si es de Google Speech to Text ó de ACR Cloud. Modificar según si se esta trabajando en local o en producción, \_Esto no tiene relacion con el player, ni la información que se ve en el reproductor de la pagina, pero si con el procesamiento de los datos de recomendación e informacion de la metadata del artista consultado.*
 
 > src/scripts/arccloud_monitor.js
 
 ![alt text](./client/public/images/readme-img/host.png)
+
+en general:
+
+- **api/radio:** Información del player y reproducción de la radio en linea.
+- **api/data:** Información que se extrae de acr_monitor.js para la metadata del artista y el servicio de Google Speech To Text.
 
 ## ¿Que archivos contienen las rutas a modificar.
 
