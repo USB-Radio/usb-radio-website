@@ -8,7 +8,7 @@ Todos los archivos del servidor se encuentran dentro de la carpeta src.
 
 > .env: son las variables de configuración para la aplicación, contienen texto plano "string" donde se guarda las configuraciones de los puertos, claves API y URL's
 
-En este archivo se encuentro
+En este archivo se encuentra
 
 - Puerto : 3000 por defecto
 - datos de acceso para API ACR Cloud
@@ -29,9 +29,11 @@ permite definir las rutas de la API:
 
 cors es un middleware que permite o restrige los recursos de un servidor entre dominios.
 el dominio del frontend al estar utilizando Vite es _"http://localhost:5173"_ en su defecto
-si se esta trabajando desde local. Para poder utilizar el servidor en el deploy de oceandigital
-esta comentado el dominio, siendo este *http://radiousbbog.tech*, habilitar el dominio al cual se
+si se esta trabajando desde local. Para poder utilizar el servidor en el dominio de oceandigital
+, esta comentaod, siendo este *http://radiousbbog.tech*, habilitar el dominio al cual se
 quiera utilizar para hacer pruebas, el primero solo funciona para ejecutarse en local y realizar pruebas.
+
+> Nota: Puede que el segundo dominio le falte el puerto, vite utiliza por defecto el puerto 5173, por lo que seria probar si funciona con http://radiousbbog.tech:5173
 
 ![alt text](./client/public/images/readme-img/app.png)
 
@@ -43,11 +45,11 @@ Las rutas que se definen son las siguientes.
 
 Esta recibe los datos de la api de radio de AzuraCast, con un servicio como postman podemos verificar
 si las peticiones estan siendo recibidas de forma correcta. Adicionalmente haciendo uso de la libreria de
-morgan, levantando el servidor ya sea: desde entorno de desarrollo _npm run dev_ ó producción _npm start_
+morgan, levantando el servidor ya sea: desde entorno de desarrollo **npm run dev** ó producción **npm start**
 podemos ver desde la consola si las peticiones estan siendo realizadas con exito.
 
 si la consola estan imprimiendo las peticiones HTTP quiere decir que nuestro servidor esta activo,
-debemos verificar que en ambos recursos sea **200** tanto para /api/radio y /api/data. Lo cual garantiza
+debemos verificar que en ambos recursos sea **200** tanto para **/api/radio** y **/api/data**. Lo cual garantiza
 que los datos estan siendo recibidos por el frontend con exito. Un **304** solo indica que no se ha actualizado
 pero el que debemos tener precaución es con el **404** que nos inidica que hubo un error.
 
@@ -60,3 +62,5 @@ el servidor de ocean digital.
 Desde Postman podemos verificar si las peticiones estan siendo realizadas de forma correcta, **(nota: solo va a funcionar si el servidor esta activo)**
 
 ![alt text](./client/public/images/readme-img/image.png)
+
+Si desde postman verificamos que la petición es correcta y el servicio aun no comunica, debemos considerar dos problemas.
