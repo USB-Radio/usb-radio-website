@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Configuración común de headers para todas las solicitudes
 const spotifyApiHeaders = {
-  "x-rapidapi-key": "0b213ba732mshcc2f8b4743e37d7p1091d9jsn0935507a83b9",
+  "x-rapidapi-key": "de837fb6bbmsh08adf72060b9e65p1fcc6ajsn21ad8cff6cd4",
   "x-rapidapi-host": "spotify23.p.rapidapi.com",
 };
 

@@ -2,7 +2,7 @@ import { port } from "./config.js";
 import app from "./app.js";
 import chalk from "chalk";
 import figlet from "figlet";
-// import "./scripts/acrcloud_monitor.js"; // <- comentar o descomentar si quiere hacer uso de la deteccion de Google o ACR Cloud
+import "./scripts/acrcloud_monitor.js"; // <- comentar o descomentar si quiere hacer uso de la deteccion de Google o ACR Cloud
 
 const main = () => {
   app.listen(port, () => {

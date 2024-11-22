@@ -5,10 +5,10 @@
 }
 
 .song-history-title {
-  color: var(--color-main);
+  color: var(--color-white);
   font-weight: 700;
   font-size: 1.6rem;
-  border-bottom: 4px solid var(--color-main);
+  border-bottom: 4px solid #bbcbe6;
   margin-bottom: 1rem;
   letter-spacing: 0.5px;
 }
@@ -18,6 +18,9 @@
   border: 2px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   /* background-color: blue; */
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: #1d2139;
 }
 .song-artwork {
   display: flex;
@@ -45,12 +48,12 @@
     width: 140px;
     font-weight: 500;
     letter-spacing: 0.5px;
-    color: var(--color-secondary);
+    color: white;
   }
 }
 .song-card-artist {
   font-weight: 300;
-  color: var(--color-secondary);
+  color: #bbcbe6;
 }
 .song-card {
   /* background-color: red; */
@@ -64,11 +67,13 @@
   width: 40%;
   padding-inline: 1rem;
   text-align: center;
-  color: #7a7c93;
+  /* color: #7a7c93; */
+  color: white;
 }
 .song-card-time {
   padding-inline: 1rem;
   font-weight: 200;
+  color: #bbcbe6;
 }
 
 @media only screen and (max-width: 2000px) {

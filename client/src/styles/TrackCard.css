@@ -12,6 +12,7 @@
 }
 .albums-card {
   border-radius: 10px;
+  border: 2px solid white;
   background: linear-gradient(
     178.1deg,
     rgba(29, 35, 71, 0.9) 8.5%,
@@ -48,6 +49,6 @@
 }
 
 .albums-card::-webkit-scrollbar-thumb {
-  background: var(--color-main);
+  background: #bbcbe6;
   border-radius: 5px;
 }

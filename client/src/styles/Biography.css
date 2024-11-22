@@ -1,5 +1,6 @@
 .biography-container {
   width: 100%;
+
   .bio-infoText {
     line-height: 1.6;
   }
@@ -23,12 +24,12 @@
 .Bio-info {
   p {
     padding-block: 1px;
-    color: #40414e;
+    color: #bbcbe6;
   }
 }
 .biography-text {
   border-top: 1px solid rgba(38, 53, 116, 0.1);
-  color: #696b7e;
+  color: #bbcbe6;
   padding-top: 0.5rem;
 }
 
@@ -40,6 +41,7 @@
   margin-left: 1.5rem;
   font-size: 3rem;
   transition: transform 0.3s ease;
+  color: white;
 }
 .bio-spotify:hover {
   cursor: pointer;
@@ -51,4 +53,8 @@
   margin-bottom: 1rem;
   border: 2px solid rgba(0, 0, 0, 0.1);
   padding: 1rem;
+  color: white;
+  border-radius: 10px;
+  border: 2px solid white;
+  background-color: #1d2139;
 }

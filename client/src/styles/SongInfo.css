@@ -1,32 +1,38 @@
 .radio-page-artistDateTitle {
   font-weight: 700;
-  border-bottom: 4px solid var(--color-secondary);
+  border-bottom: 4px solid #bbcbe6;
+  color: white;
   margin-top: 0.6rem;
   margin-bottom: 0.6rem;
   width: 100%;
 }
 .Song-boxInfo {
   padding: 1rem;
-  background-color: var(--color-white);
-  border: 2px solid rgba(0, 0, 0, 0.1);
+  /* background-color: var(--color-white); */
+  background-color: #1d2139;
+  border: 2px solid var(--color-white);
+  border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   h3 {
     font-weight: 600;
     letter-spacing: 0.5px;
-    color: var(--color-secondary);
+    color: var(--color-white);
   }
   h4 {
     font-weight: 500;
     letter-spacing: 0.3px;
     padding-bottom: 5px;
+    color: var(--color-white);
   }
   p {
-    color: #7a7c93;
+    /* color: #7a7c93; */
+    color: #bbcbe6;
     font-weight: 400;
   }
   span {
     font-weight: 500;
-    color: #7a7c93;
+    /* color: #7a7c93; */
+    color: #bbcbe6;
   }
 }
 .Song-boxInfo-album {
