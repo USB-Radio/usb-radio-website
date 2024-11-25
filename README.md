@@ -31,7 +31,7 @@ El archivo **app.js** es donde establece el uso de las rutas y permisos del serv
 permite definir las rutas de la API:
 
 cors es un middleware que permite o restrige los recursos de un servidor entre dominios.
-el dominio del frontend al estar utilizando Vite es _"http://localhost:5173"_ en su defecto
+el dominio del frontend al estar utilizando Vite es _"http://64.227.11.166/:5173"_ en su defecto
 si se esta trabajando desde local. Para poder utilizar el servidor en el dominio de oceandigital
 , esta comentado, siendo este *http://radiousbbog.tech*, habilitar el dominio al cual se
 quiera utilizar para hacer pruebas, el primero solo funciona para ejecutarse en local y realizar pruebas.
@@ -44,7 +44,7 @@ quiera utilizar para hacer pruebas, el primero solo funciona para ejecutarse en 
 
 Las rutas que se definen son las siguientes.
 
-> http://localhost:3000/api/radio
+> http://64.227.11.166/:3000/api/radio
 
 # Ruta /api/radio
 
@@ -60,7 +60,7 @@ pero el que debemos tener precaución es con el **404** que nos inidica que hubo
 
 ![alt text](./client/public/images/readme-img/consola.png)
 
-Si estas trabajando desde local si consultas la ruta _http://localhost:3000/api/radio_ mediante petición **GET**
+Si estas trabajando desde local si consultas la ruta _http://64.227.11.166/:3000/api/radio_ mediante petición **GET**
 deberias obtener un JSON con la metadata de la radio de AzuraCast, *http://radiousbbog.tech:3000/api/radio* desde
 el servidor de ocean digital.
 
@@ -82,7 +82,7 @@ backend especificadas anteriormente. Por motivo de pruebas se encuentran dos dir
 
 ![alt text](./client/public/images/readme-img/api.png)
 
-la constante API_Data es la dirección del backend. Si se ejecuta en un entorno local es el http://localhost con el numero del puerto
+la constante API_Data es la dirección del backend. Si se ejecuta en un entorno local es el http://64.227.11.166/ con el numero del puerto
 predefinido para el backend, es decir el que mencionamos anteriormente, el puerto 3000. Para el servidor con el nuevo dominio es http://radiousbbog.tech. Para obtener los datos de los servicios se agrega /api que es la ruta de procesamiento de las rutas del backend.
 
 > Nota: Aca tambien se puede verificar como el nuevo dominio le falta agregar la extension del puerto, es decir el 3000, probar si funciona agregando el puerto, es decir -> http://radiousbbog.tech:3000/api"
@@ -114,7 +114,7 @@ por tanto debemos verificar si los datos son correctos en la consola del backend
 
 Si aparece como en la imagen anteriormente debemos revisar:
 
-1. Problemas entre la comunicación entre el dominio de Vite **"http://localhost:5173"** (frontend) y el **http://localhost:3000** (backend) esto en dado caso de ser ejecutado desde local, si es desde el servidor seria reemplazar el dominio por **http://radiousbbog.tech**. Quiere decir que CORS esta impidiendo la comunicación entre ambos dominios, esto se debe modificar modificando el archivo
+1. Problemas entre la comunicación entre el dominio de Vite **"http://64.227.11.166/:5173"** (frontend) y el **http://64.227.11.166/:3000** (backend) esto en dado caso de ser ejecutado desde local, si es desde el servidor seria reemplazar el dominio por **http://radiousbbog.tech**. Quiere decir que CORS esta impidiendo la comunicación entre ambos dominios, esto se debe modificar modificando el archivo
    app.js mencionado anteriormente con el dominio correcto, el cual es el del frontend (Vite).
 
 Los archivos que se deben modificar son:

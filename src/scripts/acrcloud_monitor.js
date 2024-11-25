@@ -22,28 +22,28 @@ import {
 ffmpeg.setFfmpegPath(ffmpegPath);
 
 // Configuración de ACRCloud
-// const acrCloudConfig = {
-//   host: "identify-us-west-2.acrcloud.com",
-//   endpoint: "/v1/identify",
-//   signature_version: "1",
-//   data_type: "audio",
-//   access_key: "a08bafa8b27560228ba16cda96a3c44f",
-//   access_secret: "vcJ011PdMUlndOIr0Ba4th03HJCujIVInika9D9C",
-// };
-
 const acrCloudConfig = {
-  host: host,
-  endpoint: endpoint,
-  signature_version: signature_version,
-  data_type: data_type,
-  access_key: access_key,
-  access_secret: access_secret,
+  host: "identify-us-west-2.acrcloud.com",
+  endpoint: "/v1/identify",
+  signature_version: "1",
+  data_type: "audio",
+  access_key: "a08bafa8b27560228ba16cda96a3c44f",
+  access_secret: "vcJ011PdMUlndOIr0Ba4th03HJCujIVInika9D9C",
 };
+
+// const acrCloudConfig = {
+//   host: host,
+//   endpoint: endpoint,
+//   signature_version: signature_version,
+//   data_type: data_type,
+//   access_key: access_key,
+//   access_secret: access_secret,
+// };
 // URL del stream de audio & ruta API
 // const streamUrl = "https://a6.asurahosting.com:7340/radio.mp3";
 const streamUrl = streamHostUrl;
 // const API = `http://radiousbbog.tech:${port}/api`;
-const API = `http://localhost:${port}/api`;
+const API = `http://64.227.11.166:${port}/api`;
 
 // Ruta al archivo de credenciales de Google Cloud
 const googleCredentialsPath = "src/secrets/key.json";

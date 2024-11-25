@@ -5,18 +5,31 @@ import radioRoutes from "./routes/radio.routes.js";
 
 const app = express();
 
-//middlewares
+// Lista de orígenes permitidos
+const allowedOrigins = [
+  "http://64.227.11.166:5173", // Origen existente
+  "http://radiousbbog.tech"    // Nuevo origen
+];
+
+// Configuración de CORS con múltiples orígenes
 app.use(
   cors({
-    origin: "http://localhost:5173",
-    // origin: "http://radiousbbog.tech",
+    origin: (origin, callback) => {
+      // Si no hay origen (por ejemplo, solicitud desde Postman) o el origen está en la lista permitida
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true); // Permitir acceso
+      } else {
+        callback(new Error("No permitido por CORS")); // Bloquear acceso
+      }
+    }
   })
 );
+
+// Middlewares
 app.use(morgan("dev"));
 app.use(express.json());
 
-//rutas
-app.use("/api", radioRoutes);
+// Rutas
 app.use("/api", radioRoutes);
 
 export default app;
