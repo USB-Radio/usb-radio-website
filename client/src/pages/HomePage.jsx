@@ -1,3 +1,4 @@
+import { useData } from "../context/radioContext";
 import Navbar from "../components/Navbar";
 import AudioPlayer from "../components/AudioPlayer";
 import SliderCards from "../components/SliderCards";
@@ -6,6 +7,8 @@ import RadioPage from "../components/RadioPage";
 import { NetworksList } from "../components/NetworksList";
 
 function HomePage() {
+  const { title, artist } = useData(); // Extraer title y artist del contexto
+
   return (
     <div>
       <Navbar />
@@ -13,7 +16,7 @@ function HomePage() {
       <RadioPage />
       <NetworksList />
       <SliderCards />
-      <Footer />
+      <Footer title={title} artist={artist} /> {/* Pasar title y artist */}
     </div>
   );
 }

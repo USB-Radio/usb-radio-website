@@ -10,11 +10,26 @@ function Footer() {
   const [isScrollingUp, setIsScrollingUp] = useState(false);
   const [isAtBottom, setIsAtBottom] = useState(false);
   const [lastScrollPos, setLastScrollPos] = useState(0);
+  const [nextSong, setNextSong] = useState("No hay próxima canción disponible");
 
   const currentSongTitle =
     radioData?.currentPlaying?.song?.title || "No estamos al aire 😞";
-  const nextSongText =
-    radioData?.nextPlaying?.text || "No hay próxima canción disponible";
+
+  useEffect(() => {
+    const fetchNextSong = async () => {
+      try {
+        const response = await fetch("https://public.radio.co/stations/s1960444cd/track_next");
+        const data = await response.json();
+        setNextSong(data.title || "No hay próxima canción disponible");
+      } catch (error) {
+        console.error("Error obteniendo la siguiente canción:", error);
+      }
+    };
+    
+    fetchNextSong();
+    const interval = setInterval(fetchNextSong, 10000); // Actualizar cada 10s
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,33 +37,27 @@ function Footer() {
       const windowHeight = window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
 
-      // Comprobamos si el usuario ha llegado al final de la página
       if (windowHeight + currentScrollPos >= documentHeight) {
         setIsAtBottom(true);
       } else {
         setIsAtBottom(false);
 
-        // Detectar dirección de scroll
         if (currentScrollPos < lastScrollPos) {
-          setIsScrollingUp(true); // Scroll hacia arriba
+          setIsScrollingUp(true);
         } else {
-          setIsScrollingUp(false); // Scroll hacia abajo
+          setIsScrollingUp(false);
         }
       }
-
       setLastScrollPos(currentScrollPos);
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollPos]);
 
   return (
     <div className={`footer ${isAtBottom ? "hidden-footer" : ""}`}>
-      <div
-        className={`footer-img ${isScrollingUp ? "visible-img" : "hidden-img"}`}
-      >
+      <div className={`footer-img ${isScrollingUp ? "visible-img" : "hidden-img"}`}>
         <img src={"/images/Footer-image.png"} alt="USB RADIO - sitio oficial" />
       </div>
       <div className="footer-data">
@@ -63,7 +72,7 @@ function Footer() {
             </p>
             <p>
               A continuación...
-              <span> {nextSongText}</span>
+              <span> {nextSong}</span>
             </p>
           </div>
         </div>
